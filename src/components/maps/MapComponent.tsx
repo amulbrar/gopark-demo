@@ -3,7 +3,6 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import { useEffect } from "react";
 
 // Fix for default Leaflet markers in Next.js
 const icon = L.icon({
@@ -20,7 +19,7 @@ interface MapProps {
 }
 
 export default function MapComponent({ onBook }: MapProps) {
-  // Center roughly on a "tech park" location (e.g., Bangalore or similar)
+  // Center roughly on a generic city location
   const position: [number, number] = [12.9716, 77.5946];
 
   return (
@@ -28,41 +27,45 @@ export default function MapComponent({ onBook }: MapProps) {
       <MapContainer
         center={position}
         zoom={15}
-        scrollWheelZoom={true}
+        zoomControl={false}
         className="h-full w-full"
       >
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+          attribution="&copy; OpenStreetMap"
           url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
         />
 
-        {/* Dummy Spot 1 - Occupied */}
+        {/* Occupied Spot (Red) */}
         <Marker position={[12.9716, 77.5946]} icon={icon}>
           <Popup>
-            <div className="p-2">
-              <h3 className="font-bold text-red-500">Spot #A1 (Occupied)</h3>
+            <div className="font-sans text-center">
+              <h3 className="font-bold text-red-500 mb-1">Spot #A1</h3>
+              <span className="text-xs font-bold bg-red-100 text-red-600 px-2 py-1 rounded-full">
+                Occupied
+              </span>
             </div>
           </Popup>
         </Marker>
 
-        {/* Dummy Spot 2 - AVAILABLE */}
+        {/* Available Spot (Green - Clickable) */}
         <Marker
-          position={[12.972, 77.595]}
+          position={[12.9725, 77.5955]}
           icon={icon}
           eventHandlers={{
             click: () => {
-              // Open the booking drawer logic here if needed,
-              // but we handle it via the parent UI for simplicity
+              // We handle the click via the popup button for better UX
             },
           }}
         >
           <Popup>
-            <div className="p-2 flex flex-col gap-2">
-              <h3 className="font-bold text-green-600">Spot #B2 (Available)</h3>
-              <p className="text-xs text-gray-500">Private Driveway • ₹50/hr</p>
+            <div className="font-sans min-w-[150px]">
+              <h3 className="font-bold text-green-600 text-lg">Spot #B2</h3>
+              <p className="text-xs text-gray-500 mb-3">
+                Private Driveway • ₹50/hr
+              </p>
               <button
                 onClick={onBook}
-                className="bg-blue-600 text-white text-xs px-3 py-1 rounded-full shadow-md active:scale-95 transition-transform"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm py-2 px-4 rounded-lg shadow-md transition-all active:scale-95"
               >
                 Select Spot
               </button>
