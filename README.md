@@ -1,45 +1,68 @@
-# GoPark - Smart Parking Management System
+# 🅿️ GoPark: Smart Parking Management System
 
-GoPark is a modern Progressive Web App (PWA) designed to demonstrate a seamless parking reservation ecosystem. It features a dual-interface architecture: a mobile-first app for drivers to book spots and a desktop dashboard for property owners to monitor occupancy via simulated computer vision.
+GoPark is designed to bridge the gap between drivers and property owners. By utilizing a dual-interface architecture, it provides a seamless booking experience for users and a high-tech monitoring suite for administrators.
 
-## 🚀 Key Features
+---
 
-- **Real-Time Availability Sync**: Instant state synchronization between the driver's booking interface and the owner's dashboard using global state management.
-- **Interactive Maps**: Fully functional map interface using Leaflet.js and OpenStreetMap for spot selection.
-- **Computer Vision Simulation**: A dashboard component that simulates CCTV feed analysis with bounding box overlays to track vehicle occupancy.
-- **PWA Support**: configured with `next-pwa` for installation on mobile devices (iOS/Android) with offline capabilities.
-- **Responsive UI**: Built with Tailwind CSS and a component-first architecture for pixel-perfect rendering across devices.
+## 🌟 Key Features
+
+### 📱 For Drivers (Mobile-First)
+
+- **Interactive Spot Selection**: Explore parking zones via a high-performance **Leaflet.js** map interface.
+- **One-Tap Booking**: Streamlined reservation flow designed for on-the-go users.
+- **Native Feel**: Fully installable on iOS and Android with offline support thanks to `next-pwa`.
+
+### 🖥️ For Property Owners (Desktop)
+
+- **CV Simulation Dashboard**: A sophisticated monitoring panel simulating CCTV analysis with dynamic bounding box overlays.
+- **Live Occupancy Sync**: Watch "Real-Time" state updates as spots are booked, powered by **Zustand** global state.
+- **Data Visualization**: At-a-glance metrics for parking lot health and turnover.
+
+---
 
 ## 🛠️ Tech Stack
 
-- **Framework**: [Next.js 14](https://nextjs.org/) (App Router)
-- **Language**: TypeScript
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Maps**: [React Leaflet](https://react-leaflet.js.org/)
-- **State Management**: [Zustand](https://github.com/pmndrs/zustand)
-- **Icons**: [Lucide React](https://lucide.dev/)
+| Layer         | Technology                                     |
+| ------------- | ---------------------------------------------- |
+| **Framework** | [Next.js 14 (App Router)](https://nextjs.org/) |
+| **Language**  | TypeScript (Strict Mode)                       |
+| **Styling**   | Tailwind CSS & Framer Motion                   |
+| **State**     | Zustand (Persistent State)                     |
+| **Mapping**   | React Leaflet & OpenStreetMap                  |
+| **Icons**     | Lucide React                                   |
+
+---
 
 ## ⚡ Getting Started
 
-**Prerequisites**
+### Prerequisites
 
-- Node.js 18.x or higher
-- npm or yarn
+- **Node.js**: 18.x or higher
+- **Package Manager**: npm, yarn, or pnpm
 
-**Installation**
+### Installation
 
-- Clone the repository:
+1. **Clone the repository**
 
-`git clone [https://github.com/yourusername/gopark-demo.git](https://github.com/amulbrar/gopark-demo.git)`
+```bash
+git clone https://github.com/amulbrar/gopark-demo.git
+cd gopark-demo
 
-`cd gopark-demo`
+```
 
-- Install dependencies:
+2. **Install dependencies**
 
-`npm install`
+```bash
+npm install
 
-- Run the development server:
+```
 
-`npm run dev`
+3. **Launch the environment**
 
-Open http://localhost:3000 in your browser.
+```bash
+npm run dev
+
+```
+
+4. **Access the App**
+   Navigate to [http://localhost:3000](https://www.google.com/search?q=http://localhost:3000) to view the application.
