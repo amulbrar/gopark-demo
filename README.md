@@ -27,13 +27,18 @@ GoPark is a modern Progressive Web App (PWA) designed to demonstrate a seamless 
 - npm or yarn
 
 **Installation**
-Clone the repository:
+
+- Clone the repository:
+
 `git clone [https://github.com/yourusername/gopark-demo.git](https://github.com/amulbrar/gopark-demo.git)`
 `cd gopark-demo`
 
-Install dependencies:
+- Install dependencies:
+
 `npm install`
 
-Run the development server:
+- Run the development server:
+
 `npm run dev`
+
 Open http://localhost:3000 in your browser.
