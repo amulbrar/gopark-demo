@@ -31,6 +31,7 @@ GoPark is a modern Progressive Web App (PWA) designed to demonstrate a seamless 
 - Clone the repository:
 
 `git clone [https://github.com/yourusername/gopark-demo.git](https://github.com/amulbrar/gopark-demo.git)`
+
 `cd gopark-demo`
 
 - Install dependencies:
