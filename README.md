@@ -19,24 +19,21 @@ GoPark is a modern Progressive Web App (PWA) designed to demonstrate a seamless 
 - **State Management**: [Zustand](https://github.com/pmndrs/zustand)
 - **Icons**: [Lucide React](https://lucide.dev/)
 
-⚡ Getting Started
-Prerequisites
-Node.js 18.x or higher
+## ⚡ Getting Started
 
-npm or yarn
+**Prerequisites**
 
-Installation
+- Node.js 18.x or higher
+- npm or yarn
+
+**Installation**
 Clone the repository:
+`git clone [https://github.com/yourusername/gopark-demo.git](https://github.com/amulbrar/gopark-demo.git)`
+`cd gopark-demo`
 
-Bash
-git clone [https://github.com/yourusername/gopark-demo.git](https://github.com/yourusername/gopark-demo.git)
-cd gopark-demo
 Install dependencies:
+`npm install`
 
-Bash
-npm install
 Run the development server:
-
-Bash
-npm run dev
+`npm run dev`
 Open http://localhost:3000 in your browser.
