@@ -2,6 +2,7 @@
 
 import { useStore } from "@/store/useStore";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import CCTVFeed from "@/components/dashboard/CCTVFeed";
 import {
@@ -64,9 +65,11 @@ export default function DashboardPage() {
         <div className="pt-6 border-t border-gray-100">
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 rounded-full bg-gray-200 overflow-hidden">
-              <img
+              <Image
                 src="https://api.dicebear.com/7.x/avataaars/svg?seed=Owner"
                 alt="Owner"
+                width={40}
+                height={40}
               />
             </div>
             <div>
@@ -93,7 +96,7 @@ export default function DashboardPage() {
           <div>
             <h2 className="text-3xl font-bold text-gray-900">Dashboard PRO</h2>
             <p className="text-gray-500">
-              Welcome back, here's what's happening at{" "}
+              Welcome back, here&apos;s what&apos;s happening at{" "}
               <span className="font-semibold text-gray-900">Sector B</span>{" "}
               today.
             </p>

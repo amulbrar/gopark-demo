@@ -1,16 +1,10 @@
 "use client";
 
 import { useStore } from "@/store/useStore";
-import { useEffect, useState } from "react";
-import { Maximize2, MoreVertical, Signal } from "lucide-react";
+import { Maximize2, Signal } from "lucide-react";
 
 export default function CCTVFeed() {
   const isSpotBooked = useStore((state) => state.isSpotBooked);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   return (
     <div className="relative w-full h-full bg-black rounded-2xl overflow-hidden shadow-2xl border border-gray-800 group">

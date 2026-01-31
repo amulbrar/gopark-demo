@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { MapPin, Car, ShieldCheck } from "lucide-react";
 
@@ -11,9 +12,11 @@ export default function Home() {
           GoPark.
         </h1>
         <div className="h-8 w-8 rounded-full bg-gray-200 overflow-hidden">
-          <img
+          <Image
             src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix"
             alt="User"
+            width={32}
+            height={32}
           />
         </div>
       </div>

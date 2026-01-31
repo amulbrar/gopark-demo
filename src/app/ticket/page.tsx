@@ -1,12 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Home, Navigation } from "lucide-react";
 
 export default function TicketPage() {
-  const [timeLeft, setTimeLeft] = useState("01:45:30");
+  const [timeLeft] = useState("01:45:30");
 
   return (
     <main className="min-h-screen bg-blue-600 text-white p-6 flex flex-col justify-between relative overflow-hidden">

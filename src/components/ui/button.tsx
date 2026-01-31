@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
-import { cva, type VariantProps } from "class-variance-authority"; // You might need to install this: npm i class-variance-authority
 import { cn } from "@/lib/utils";
 
 // If you don't want to install 'class-variance-authority' yet,
@@ -42,9 +41,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       icon: "h-10 w-10",
     };
 
-    // @ts-ignore - simulating cva behavior
+    // @ts-expect-error - variant is a string and can be used as an index
     const variantClass = variants[variant] || variants.default;
-    // @ts-ignore
+    // @ts-expect-error - size is a string and can be used as an index
     const sizeClass = sizes[size] || sizes.default;
 
     return (
